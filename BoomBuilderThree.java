@@ -16,7 +16,7 @@ public class BoomBuilderThree implements ActionListener{
 		EventQueue.invokeLater ( ()->{
 			double test = 1000;
 			JFrame thirdframe = new BoomBuilderFour();
-			thirdframe.setTitle("BOOM TWO!");
+			thirdframe.setTitle("BOOM LOL!");
 			thirdframe.setDefaultCloseOperation(thirdframe.HIDE_ON_CLOSE);
 			thirdframe.setVisible(true);
 		});

@@ -32,15 +32,21 @@ import javax.swing.Timer;
 		public Buttons () {
 			
 			double messenger = 0;
-			t = new Timer(50, (ActionListener) this);
+			t = new Timer(1, (ActionListener) this);
 //		Button Creation:		
 		JButton playing = new JButton("Random");
 		Image imgage = new ImageIcon("E:/abab.PNG").getImage();
 		JButton exit = new JButton("EXIT");
 		JButton playerTwo = new JButton("Gears");
 		JButton playerFour = new JButton("Fidget Spinner");
+
+//		The Bugged Buttons:
+		
 		JButton playerFive = new JButton("Sparkles");
 		JButton playerSix = new JButton("I Dunno");
+		
+//		The Bugged Buttons:
+		
 		JButton credits = new JButton("Credits");
 		JButton playerSeven = new JButton("NUM SEVEN");
 		JButton playerEight = new JButton("Rectangles");
@@ -53,8 +59,14 @@ import javax.swing.Timer;
 		BoomBuilderThree three = new BoomBuilderThree();
 		BoomBuilderFour four = new BoomBuilderFour();
 		BoomBuilderFive five = new BoomBuilderFive();
+		
+//		The Bugged Buttons:
+		
 		BoomBuilderSix six = new BoomBuilderSix();
 		BoomBuilderSeven seven = new BoomBuilderSeven();
+		
+//		
+		
 		BoomBuilderEight eight = new BoomBuilderEight();
 		BoomBuilderNine nine = new BoomBuilderNine();
 		
@@ -83,7 +95,7 @@ import javax.swing.Timer;
 		buttonPanel.add(playerSix);
 		buttonPanel.add(playerSeven);
 		buttonPanel.add(playerEight);
-		
+//		
 //		Adding Panel to Frame:
 		add(exitPanel);
 		add(buttonPanel);
@@ -94,26 +106,26 @@ import javax.swing.Timer;
 	}
 		double d = 10;
 		double looper = 0;
-		double extraLoops = 50;
+		double extraLoops = 100;
 		double drawer = 2;
 		public void paintComponent (Graphics g) {
 			double theta = 0;
-			Color randomColor = new Color(10, 10, 10);
+			Color randomColor = new Color(40, 10, 10);
 			g.setColor(randomColor);
 			g.fillRect(0,0,screenW,screenH);
 			Font helevicta = new Font("Helevicta Bold", Font.BOLD, 200);
 			g.setFont(helevicta);
 			
 			while (theta < extraLoops) {
-				double y = Math.cos(theta)/d;
-				double x = Math.sin(theta)/d;
+				double y = Math.cos(theta)*d;
+				double x = Math.sin(theta)*d;
 			
 				g.setColor(Color.ORANGE);			
-					g.fillOval((int) x + screenW/(int)drawer, (int) y + screenH/(int)drawer, 20, 20);
+					g.fillOval((int) x + screenW/(int)drawer, (int) y + screenH/(int)drawer, 80, 10);
 				g.setColor(Color.GREEN);
-					g.fillRect(100+ (int) x + screenW/(int)drawer, (int) y + screenH/(int)drawer, 10, 10);
+					g.fillRect(100+ (int) x + screenW/(int)drawer, (int) y + screenH/(int)drawer, 10, 40);
 				g.setColor(Color.RED);	
-					g.fillRect(-100 + (int) x + screenW/(int)drawer, (int) y + screenH/(int)drawer, 10, 10);
+					g.fillRect(-100 + (int) x + screenW/(int)drawer, (int) y + screenH/(int)drawer, 10, 40);
 				theta++;
 			}
 		
@@ -127,8 +139,8 @@ import javax.swing.Timer;
 		}
 
 		public void actionPerformed(ActionEvent e) {
-			d  = Math.random()/100;
-			if (d < 0.001) {
+			d+=10;
+			if (d > 1000) {
 				d = 10;
 			}
 			looper = 0;

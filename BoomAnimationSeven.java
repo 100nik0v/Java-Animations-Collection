@@ -47,8 +47,13 @@ public class BoomAnimationSeven extends JComponent implements ActionListener{
 		  g2.setColor(Color.black);
 		  g2.fillRect(0, 0, screenW, screenH);
 		  g2.setColor(Color.WHITE);
-		
-	  g2.fillRect( (int) x , (int) y , 10 , 10);
+	int loop = 0;
+	double oop = 10; 
+		  if (loop < 100)	{
+	  g2.fillRect( (int) x , (int) y - (int)oop, 10 , 10);
+	  loop++;
+	  oop +=10;
+		  }
 //	  k -= 0.00001;
 		  }
 //Timer Listener:

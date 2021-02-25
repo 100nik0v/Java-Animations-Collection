@@ -21,12 +21,11 @@ public class BoomBuilderSix extends JFrame implements ActionListener{
 	
 	public void actionPerformed(ActionEvent e) {
 		EventQueue.invokeLater ( ()->{
-			double test = 1000;
-			JFrame secondframe = new BoomBuilderSeven();
-			secondframe.setTitle("LAST ONE!");
-			secondframe.setDefaultCloseOperation(secondframe.HIDE_ON_CLOSE);
-			secondframe.setVisible(true);
-		});	
+			JFrame sixthframe = new BoomBuilderSeven();
+			sixthframe.setTitle("BOOM do!");
+			sixthframe.setDefaultCloseOperation(sixthframe.HIDE_ON_CLOSE);
+			sixthframe.setVisible(true);
+		});
 	}
 	   
 }
