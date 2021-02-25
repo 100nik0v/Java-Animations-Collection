@@ -23,7 +23,7 @@ public class BoomBuilderNine extends JFrame implements ActionListener{
 			EventQueue.invokeLater ( ()->{
 				double test = 1000;
 				JFrame secondframe = new BoomBuilderTen();
-				secondframe.setTitle("BOOM TWO!");
+				secondframe.setTitle("BOOM DID!");
 				secondframe.setDefaultCloseOperation(secondframe.HIDE_ON_CLOSE);
 				secondframe.setVisible(true);
 			});

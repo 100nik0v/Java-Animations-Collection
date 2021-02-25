@@ -34,7 +34,7 @@ public class BoomMain implements ActionListener{
 		EventQueue.invokeLater ( ()->{
 			double test = 1000;
 			JFrame secondframe = new BoomBuilderTwo();
-			secondframe.setTitle("BOOM TWO!");
+			secondframe.setTitle("BOOM BAM!");
 			secondframe.setDefaultCloseOperation(secondframe.HIDE_ON_CLOSE);
 			secondframe.setVisible(true);
 		});

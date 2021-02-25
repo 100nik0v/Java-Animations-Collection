@@ -19,7 +19,7 @@ public class BoomAnimationFive  extends JComponent implements ActionListener{
 	   int counter = 0;
 //Variables:
 	double k = -2;
-	int thetaO = 400;
+	double thetaO = 30;
 	private boolean flag = false;
 	private boolean flagged = false;
 	double decimalDiv = 100000;
@@ -59,12 +59,7 @@ public class BoomAnimationFive  extends JComponent implements ActionListener{
 		double radius = 3;
 		g2.fillOval((int)inDegreesCos + (screenW/2) - 300, (int)inDegreesSin + (screenH/2) - 66, (int) radius, (int) radius);
 		theta += 0.1;
-		if (theta > 1) {
-			theta = 0;
 		}
-		}
-		theta = 0;
-		
 	}
 //Timer Listener:
 	int i = 1;
